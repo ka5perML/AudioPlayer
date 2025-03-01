@@ -1,0 +1,238 @@
+﻿<Window x:Class="Audio.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Audio"
+        mc:Ignorable="d"
+        Title="Плеер" Height="469" Width="369"
+        Background="Transparent"
+        ResizeMode="CanMinimize"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        MouseDown="Window_MouseDown"
+        BorderBrush="Transparent"
+        Icon="/Images/Icon.jpg">
+    <Grid>
+
+        <Image x:Name="BackgroundImage"
+                   Source="/Images/LoadImage.png"
+                   Stretch="Fill">
+            <Image.Clip>
+                <RectangleGeometry RadiusX="35" RadiusY="35" Rect="0,0,370,470"/>
+            </Image.Clip>
+            <Image.Effect>
+                <BlurEffect Radius="20"/>
+            </Image.Effect>
+        </Image>
+
+        <Border CornerRadius="30" 
+        BorderBrush="#a000d6" 
+        BorderThickness="2"/>
+
+        <Image x:Name="SoundImage" 
+                   Width="304" 
+               Margin="32,66,33,187"
+               Stretch="Uniform"
+               RenderOptions.BitmapScalingMode="HighQuality"/>
+
+        <TextBlock x:Name="SoundArtist" 
+                   Margin="0,51,0,0"
+                   Foreground="White" 
+                   FontFamily="Arial Black" 
+                   FontWeight="Bold" 
+                   VerticalAlignment="Top" 
+                   HorizontalAlignment="Center"     
+                   TextAlignment="Center"
+                   Width="266" 
+                   Height="21"
+                   TextWrapping="Wrap"
+                   TextTrimming="CharacterEllipsis"/>
+
+        <TextBlock x:Name="StartPositionText" 
+           Margin="10,313,0,0"
+           Foreground="White" 
+           FontFamily="Arial Black" 
+           FontWeight="Bold" 
+           VerticalAlignment="Top" 
+           HorizontalAlignment="Left"     
+           TextAlignment="Center"
+           Width="38" 
+           Height="21"
+           TextWrapping="Wrap"
+           TextTrimming="CharacterEllipsis"/>
+
+        <TextBlock x:Name="EndPositionText" 
+            Margin="316,316,0,0"
+            Foreground="White" 
+            FontFamily="Arial Black" 
+            FontWeight="Bold" 
+            VerticalAlignment="Top" 
+            HorizontalAlignment="Left"     
+            TextAlignment="Center"
+            Width="38" 
+            Height="21"
+            TextWrapping="Wrap"
+            TextTrimming="CharacterEllipsis"/>
+
+        <TextBlock x:Name="SoundName" 
+                   Margin="0,284,0,153"
+                   Foreground="White" 
+                   FontFamily="Arial Black" 
+                   HorizontalAlignment="Center" 
+                   FontSize="16"
+                   TextWrapping="Wrap"/>
+
+        <TextBlock x:Name="VolumeLevel" 
+           Margin="335,414,0,42"
+           Foreground="White" 
+           FontFamily="Arial Black" 
+           HorizontalAlignment="Left" 
+           FontSize="12"
+           TextWrapping="Wrap"/>
+        <Button x:Name="ToFix" 
+        Click="ToFix_Click" 
+        Background="Transparent" 
+        Margin="26,21,299,419" 
+        BorderBrush="Transparent">
+            <Image x:Name="FixImage" 
+                   Source="/Images/FixOff.png"
+                   Cursor="Hand"/>
+
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="{TemplateBinding Background}" 
+                            BorderBrush="{TemplateBinding BorderBrush}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+
+        <Button x:Name="StartAndStopButton" 
+                Click="Play_Click" 
+                Background="Transparent" 
+                Margin="166,374,166,59" 
+                BorderBrush="Transparent">
+
+            <Image x:Name="StartAndStop" 
+                   Source="Images/Start.png"
+                   Cursor="Hand">
+            </Image>
+
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="{TemplateBinding Background}" 
+                                        BorderBrush="{TemplateBinding BorderBrush}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="button" 
+        Content="X"
+        Foreground="Red"
+        FontSize="20"
+        Margin="0,21,19,0"
+        Background="Transparent" 
+        BorderBrush="#FF262626"
+        HorizontalContentAlignment="Center"
+        VerticalContentAlignment="Center"
+        Click="ExitButton_Click" 
+        FontFamily="Arial Rounded MT Bold" 
+        FontWeight="Bold" 
+        Height="29" 
+        Width="29"
+        VerticalAlignment="Top" 
+        HorizontalAlignment="Right" 
+        RenderTransformOrigin="0.689,0.552" 
+        Cursor="Hand">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="{TemplateBinding Background}" 
+                                        BorderBrush="{TemplateBinding BorderBrush}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Margin="238,374,93,59" 
+                Background="Transparent"
+                BorderBrush="Transparent"
+                Click="NextButton_Click"
+                Cursor="Hand">
+            <Image x:Name="NextTrack" 
+                Source="/Images/Next.png"
+                Cursor="Hand">
+            </Image>
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="{TemplateBinding Background}" 
+                            BorderBrush="{TemplateBinding BorderBrush}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Margin="93,374,240,59"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                Click="PrevButton_Click"
+                Cursor="Hand">
+            <Image x:Name="PrevTrack"
+                Source="/Images/Prev.png"/>
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="{TemplateBinding Background}" 
+                                    BorderBrush="{TemplateBinding BorderBrush}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Slider x:Name="ProgressSlider"
+                Minimum="0"
+                Maximum="100"
+                Value="0" 
+                Margin="26,334,27,117"
+                TickFrequency="1"
+                PreviewMouseUp="ProgressSlider_PreviewMouseUp"/>
+        <Slider x:Name="VolumeSlider"
+                ValueChanged="VolumeSlider_VolumeChanger"
+                Margin="26,433,27,17"
+                Minimum="0"
+                Maximum="100"
+                IsSnapToTickEnabled="True">
+        </Slider>
+    </Grid>
+</Window>

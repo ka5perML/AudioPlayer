@@ -1,0 +1,62 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Ilzat\\source\\repos\\Audio\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D78ACDF6-C615-4CBA-A4C2-1A22D26E0CDD}|Audio\\Audio.csproj|c:\\users\\ilzat\\source\\repos\\audio\\audio\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D78ACDF6-C615-4CBA-A4C2-1A22D26E0CDD}|Audio\\Audio.csproj|solutionrelative:audio\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D78ACDF6-C615-4CBA-A4C2-1A22D26E0CDD}|Audio\\Audio.csproj|c:\\users\\ilzat\\source\\repos\\audio\\audio\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D78ACDF6-C615-4CBA-A4C2-1A22D26E0CDD}|Audio\\Audio.csproj|solutionrelative:audio\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Ilzat\\source\\repos\\Audio\\Audio\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Audio\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Ilzat\\source\\repos\\Audio\\Audio\\MainWindow.xaml.cs*",
+              "RelativeToolTip": "Audio\\MainWindow.xaml.cs*",
+              "ViewState": "AgIAANcAAAAAAAAAAAAQwOoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T12:52:14.814Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Ilzat\\source\\repos\\Audio\\Audio\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Audio\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Ilzat\\source\\repos\\Audio\\Audio\\MainWindow.xaml",
+              "RelativeToolTip": "Audio\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-27T16:55:11.557Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
