@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
     <OutputType>WinExe</OutputType>
@@ -11,15 +11,6 @@
 	<PropertyGroup>
 		<TargetFramework>net6.0-windows10.0.19041.0</TargetFramework>
 	</PropertyGroup>
-
-	<ItemGroup>
-	  <None Remove="Images\FixOff.png" />
-	  <None Remove="Images\FixOn.png" />
-	  <None Remove="Images\Icon.jpg" />
-	  <None Remove="Images\LoadImage.png" />
-	  <None Remove="Images\Next.png" />
-	  <None Remove="Images\Prev.png" />
-	</ItemGroup>
 
   <ItemGroup>
     <COMReference Include="WMPNSSCI">
